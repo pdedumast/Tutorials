@@ -46,6 +46,7 @@ int main(int argc, char*argv[])
         FilterType::Pointer filter=FilterType::New();
         filter->SetInput(image);
         filter->Update();
+        std::cout<<"Treatment"<<std::endl;
         
     
         // Write the Output Image
