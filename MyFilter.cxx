@@ -3,10 +3,11 @@
 #include "itkImageFileWriter.h"
 
 #include "MyFilter.h"
-
+#include "MyFilterCLP.h"
 
 int main(int argc, char*argv[])
 {
+    PARSE_ARGS;
     
     if( argc < 3 )
     {
@@ -17,7 +18,7 @@ int main(int argc, char*argv[])
     else
     {
         // Setup types
-        typedef itk::Image<unsigned char, 2>   ImageType;
+        typedef itk::Image<unsigned char, 3>   ImageType;
         typedef itk::MyFilter<ImageType>  FilterType;
     
         // Load the Input Image
@@ -46,9 +47,7 @@ int main(int argc, char*argv[])
         FilterType::Pointer filter=FilterType::New();
         filter->SetInput(image);
         filter->Update();
-        std::cout<<"Treatment"<<std::endl;
         
-    
         // Write the Output Image
         typedef  itk::ImageFileWriter< ImageType > WriterType;
         WriterType::Pointer writer = WriterType::New();
