@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><executable>
+    
+    <category>Examples</category>
+    <title>MyFilter</title>
+    <description><![CDATA[Gaussian Filter Exercices]]></description>
+    <version>1.0</version>
+    <contributor>Priscille de Dumast</contributor>
+    
+    <parameters>
+        <label>Input/Output</label>
+        
+        <image>
+            <name>inputVolume</name>
+            <label>Input Volume</label>
+            <channel>input</channel>
+            <index>0</index>
+            
+        </image>
+        
+        <image>
+            <name>outputVolume</name>
+            <label>Output Volume</label>
+            <channel>output</channel>
+            <index>1</index>
+        </image>
+
+    </parameters>
+    
+</executable>
+
+
+
+
